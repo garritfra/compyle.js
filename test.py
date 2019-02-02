@@ -1,2 +1,3 @@
-print('Hello World')
-print("öasdk")
+num = 5
+
+print(num)

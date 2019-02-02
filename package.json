@@ -15,6 +15,7 @@
   "author": "@garritfra",
   "license": "ISC",
   "dependencies": {
+    "commander": "^2.19.0",
     "typescript": "^3.3.1"
   },
   "devDependencies": {
