@@ -17,6 +17,7 @@ let buffer = new FileBuffer(input.split("\n"));
 buffer.applyTransform(transforms.removeComments);
 buffer.applyTransform(transforms.removeEmptyLines);
 buffer.applyTransform(transforms.addVariableDeclarations);
+buffer.applyTransform(transforms.fixElif);
 buffer.applyTransform(transforms.replacePrint);
 buffer.applyTransform(transforms.insertBlocks);
 

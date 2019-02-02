@@ -1,12 +1,15 @@
-num = 5
-num2 = 10  # This is a comment
+# Auto fahren
 
-print(num + num2)  # this is also a comment
+alter = 18
 
-if (num > num2):
-    if (1 < 2):
-        print("Two if blocks executed")
-    print("Inside first if block")
+if (alter >= 18):
+    print("Du darfst endlich Auto fahren!")
 
+elif (alter >= 16):
+    print("Du darfst Moped fahren, aber nicht Auto")
 
-print("Global Scope")
+elif (alter >= 14):
+    print("Du darfst Mofa fahren, aber nicht Moped")
+
+else:
+    print("Du musst Bus fahren!")
