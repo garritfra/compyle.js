@@ -1,3 +1,3 @@
 num = 5
-
-print(num)
+num2 = 10
+print(num + num2)
