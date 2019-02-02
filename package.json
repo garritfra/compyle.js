@@ -1,12 +1,16 @@
 {
-  "name": "node.py",
-  "version": "1.0.0",
+  "name": "compyle",
+  "version": "0.0.1",
   "description": "Transpile Python Code into something Node.js can understand",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && node dist/index.js"
+    "start": "npm run build && node dist/index.js",
+    "publish": "npm run build && npm publish"
+  },
+  "bin": {
+    "compyle": "./dist/index.js"
   },
   "author": "@garritfra",
   "license": "ISC",
