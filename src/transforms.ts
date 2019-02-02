@@ -23,3 +23,21 @@ export function removeComments(contents: string[]): string[] {
     return line.substr(0, commentIndex).trimRight();
   });
 }
+
+export function insertBlocks(contents: string[]): string[] {
+  let indentation = 0;
+  const getIndentation = (line: string) => line.search(/\S|$/);
+
+  return contents.map((line, i) => {
+    if (line[line.length - 1] == ":") {
+      // Update indentation with next line
+      indentation = getIndentation(contents[i + 1]);
+      return line.replace(":", "{");
+    } else if (indentation > getIndentation(line)) {
+      indentation = getIndentation(line);
+      return "}" + line;
+    }
+
+    return line;
+  });
+}
